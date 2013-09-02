@@ -4,7 +4,7 @@ Helpdesk Open Source
 Este proyecto tiene como objetivo la creación de un software para helpdesk 
 sencillo y libre.
 
-Esta siendo desarrollado en Symfony 2.2.x utilizando varios bundles y frameworks 
+Esta siendo desarrollado en Symfony 2.3.x LTS utilizando varios bundles y frameworks 
 con trayectoria en css y javascript.
 
 1) Instalación y configuración
@@ -76,18 +76,18 @@ Componentes
 
 Los componentes utilizados son:
 
-  * [**FOSUserBundle**][2] - Bundle para la administración de usuarios
+  * [**FOSUserBundle 1.3.x**][2] - Bundle para la administración de usuarios
 
-  * [**SonataAdminBundle**][3] - Bundle para generar backends
+  * [**SonataAdminBundle 2.2.x**][3] - Bundle para generar backends
 
-  * [**Bootstrap**][4] - Framework CSS creado por twitter
+  * [**Bootstrap 3.0**][4] - Framework CSS creado por twitter
 
-  * [**JQuery**][5] - Framework Javascript
+  * [**JQuery 2.0.x**][5] - Framework Javascript
 
 Saludos!
 
 [1]:  http://getcomposer.org/
 [2]:  https://github.com/FriendsOfSymfony/FOSUserBundle
 [3]:  https://github.com/sonata-project/SonataAdminBundle
-[4]:  http://twitter.github.com/bootstrap/
+[4]:  http://getbootstrap.com/
 [5]:  http://jquery.com/
