@@ -1,0 +1,89 @@
+{% extends "::base.html.twig" %}
+
+{% block stylesheets %}
+<link href="{{ asset("css/bootstrap.min.css") }}" rel="stylesheet" media="screen">
+<link href="{{ asset("css/helpdesk.css") }}" rel="stylesheet" media="screen">
+{% endblock %}
+
+{% block body %}
+<div id="wrap">
+    <div class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="{{ path("homepage") }}">HelpdeskOS</a>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li></span><a href="{{ path("homepage") }}">Inicio</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Incidencias <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="{{ path("incidencia_new") }}">Registar Incidencia</a></li>
+                            <li><a href="{{ path("incidencia") }}">Ver Incidencias</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="{{ path("sonata_admin_dashboard") }}">Administración</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Mi Cuenta <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="{{ path("fos_user_change_password") }}">Cambiar Contraseña</a></li>
+                            <li class="divider"></li>
+                            <li><a href="{{ path("fos_user_security_logout") }}">Cerrar Sesión</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+      {% if app.session.flashbag.has('success') %}
+      {% for flashMessage in app.session.flashbag.get('success') %}
+            <div class="alert alert-success alert-dismissable">
+                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+            {{ flashMessage }}
+            </div>
+      {% endfor %}
+      {% endif %}
+      {% if app.session.flashbag.has('error') %}
+      {% for flashMessage in app.session.flashbag.get('notice') %}
+            <div class="alert alert-danger alert-dismissable">
+                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+            {{ flashMessage }}
+            </div>
+      {% endfor %}
+      {% endif %}
+      {% block content %}
+      {% endblock %}
+    </div>
+</div>
+
+<footer>
+    <div class="container">
+        <p class="text-muted credit">Helpdesk Open Source <a href="http://www.gnu.org/licenses/gpl-2.0.html">GPLv2</a> 2012 - {{ "now"|date('Y') }}</p>
+    </div>
+</footer>
+{% endblock %}
+
+{% block javascripts %}
+<script src="{{ asset("js/jquery-2.0.3.min.js") }}"></script>
+<script src="{{ asset("js/bootstrap.min.js") }}"></script>
+<script src="{{ asset("js/funciones.js") }}"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        var url = window.location;
+    // Will only work if string in href matches with location
+        $('ul.nav a[href="' + url + '"]').parent().addClass('active');
+
+    // Will also work for relative and absolute hrefs
+        $('ul.nav a').filter(function () {
+            return this.href == url;
+        }).parent().addClass('active').parent().parent().addClass('active');
+    });
+</script>
+{% endblock %}

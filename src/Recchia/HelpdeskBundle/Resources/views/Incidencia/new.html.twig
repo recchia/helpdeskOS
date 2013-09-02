@@ -1,0 +1,131 @@
+{% extends '::layout.html.twig' %}
+
+{% block content -%}
+<h2>Nuevo Registro</h2>
+
+<div class="row">
+<div class="well">
+    <form action="{{ path('incidencia_create') }}" class="form-horizontal" method="post" {{ form_enctype(form) }} role="form">
+    <fieldset>
+        <legend>Datos de la Incidencia</legend>
+        {{ form_errors(form) }}
+        <div class="form-group">
+            {{ form_label(form.cedula, null, {'label_attr': {'class': 'control-label col-lg-1'}}) }}
+            <div class="input-group col-lg-3">
+            {{ form_errors(form.cedula) }}
+            {{ form_widget(form.cedula) }}
+            <span class="input-group-btn">
+              <button class="btn btn-default" type="button">Buscar</button>
+            </span>
+            </div>
+        </div>
+        <div class="form-group">
+            {{ form_label(form.nombres, null, {'label_attr': {'class': 'control-label col-lg-1'}}) }}
+            <div class="col-lg-4">
+            {{ form_errors(form.nombres) }}
+            {{ form_widget(form.nombres) }}
+            </div>
+        </div>
+        <div class="form-group">
+            {{ form_label(form.apellidos, null, {'label_attr': {'class': 'control-label col-lg-1'}}) }}
+            <div class="col-lg-4">
+            {{ form_errors(form.apellidos) }}
+            {{ form_widget(form.apellidos) }}
+            </div>
+        </div>
+        <div class="form-group">
+            {{ form_label(form.incidencia, null, {'label_attr': {'class': 'control-label col-lg-1'}}) }}
+            <div class="col-lg-6">
+            {{ form_errors(form.incidencia) }}
+            {{ form_widget(form.incidencia) }}
+            </div>
+        </div>
+        <div class="form-group">
+            {{ form_label(form.motivo, null, {'label_attr': {'class': 'control-label col-lg-1'}}) }}
+            <div class="col-lg-6">
+            {{ form_errors(form.motivo) }}
+            {{ form_widget(form.motivo) }}
+            </div>
+        </div>
+        <div class="form-group">
+            {{ form_label(form.solucion, null, {'label_attr': {'class': 'control-label col-lg-1'}}) }}
+            <div class="col-lg-6">
+            {{ form_errors(form.solucion) }}
+            {{ form_widget(form.solucion) }}
+            </div>
+        </div>
+        <div class="form-group">
+            {{ form_label(form.unidad, null, {'label_attr': {'class': 'control-label col-lg-1'}}) }}
+            <div class="col-lg-6">
+            {{ form_errors(form.unidad) }}
+            {{ form_widget(form.unidad) }}
+            </div>
+        </div>
+        <div class="form-group">
+            {{ form_label(form.tecnico, null, {'label_attr': {'class': 'control-label col-lg-1'}}) }}
+            <div class="col-lg-6">
+            {{ form_errors(form.tecnico) }}
+            {{ form_widget(form.tecnico) }}
+            </div>
+        </div>
+        <div class="form-group">
+            {{ form_label(form.categoria, null, {'label_attr': {'class': 'control-label col-lg-1'}}) }}
+            <div class="col-lg-6">
+            {{ form_errors(form.categoria) }}
+            {{ form_widget(form.categoria) }}
+            </div>
+        </div>
+        <div class="form-group">
+            {{ form_label(form.tarea, null, {'label_attr': {'class': 'control-label col-lg-1'}}) }}
+            <div class="col-lg-6">
+            {{ form_errors(form.tarea) }}
+            {{ form_widget(form.tarea) }}
+            </div>
+        </div>
+            {{ form_rest(form) }}
+        <div class="form-group">
+            <div class="col-lg-6 col-lg-offset-1">
+               <button class="btn btn-primary" type="submit">Crear</button>
+                <a class="btn btn-primary" href="{{ path('incidencia') }}">Listado</a> 
+            </div>
+        </div>
+    </fieldset>
+</form>
+</div>
+</div>
+{% endblock %}
+
+{% block javascripts %}
+{{ parent() }}
+<script type="text/javascript">
+    $(document).ready(function() {
+        $("#inass_helpdeskbundle_incidenciatype_categoria").on('change', function(){
+            cargarCombo('{{ path("tareasByCategoria") }}', $(this), $("#inass_helpdeskbundle_incidenciatype_tarea"));
+        });
+        /*$("#buscar").click(function(){
+            var cedulaField = document.getElementById("inass_helpdeskbundle_incidenciatype_cedula");
+            var contenido = cedulaField.value;
+            var expresion = /^[0-9]+$/;
+            if(!expresion.test(contenido)) {
+                alert("¡Solo se aceptan números sin puntos ni comas!");
+            } else {
+                $.ajax({
+                    url: '{# path("buscar_empleado") #}',
+                    data: {
+                        cedula: contenido
+                    },
+                    type: 'POST',
+                    dataType: 'json',
+                    success : function(response) {
+                        $("#inass_helpdeskbundle_incidenciatype_nombres").val(response.nomper);
+                        $("#inass_helpdeskbundle_incidenciatype_apellidos").val(response.apeper);
+                    },
+                    error : function(xhr, status) {
+                        alert( "Petición fallida: " + status + ' '+xhr.statusText );
+                    }
+                });
+            }
+        });*/
+    });
+</script>
+{% endblock %}

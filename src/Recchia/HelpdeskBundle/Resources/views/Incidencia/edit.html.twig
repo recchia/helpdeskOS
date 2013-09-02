@@ -1,0 +1,105 @@
+{% extends '::layout.html.twig' %}
+
+{% block content -%}
+    <h2>Editar Registro</h2>
+<div class="row">
+<div class="well">
+    <form action="{{ path('incidencia_update', { 'id': entity.id }) }}" class="form-horizontal" method="post" {{ form_enctype(edit_form) }}>
+        <input type="hidden" name="_method" value="PUT" />
+        <fieldset>
+        <legend>Datos de la Incidencia</legend>
+        {{ form_errors(edit_form) }}
+        <div class="form-group">
+            {{ form_label(edit_form.cedula, null, {'label_attr': {'class': 'control-label col-lg-1'}}) }}
+            <div class="input-group col-lg-3">
+            {{ form_errors(edit_form.cedula) }}
+            {{ form_widget(edit_form.cedula) }}
+            <span class="input-group-btn">
+              <button class="btn btn-default" type="button">Buscar</button>
+            </span>
+            </div>
+        </div>
+        <div class="form-group">
+            {{ form_label(edit_form.nombres, null, {'label_attr': {'class': 'control-label col-lg-1'}}) }}
+            <div class="col-lg-4">
+            {{ form_errors(edit_form.nombres) }}
+            {{ form_widget(edit_form.nombres) }}
+            </div>
+        </div>
+        <div class="form-group">
+            {{ form_label(edit_form.apellidos, null, {'label_attr': {'class': 'control-label col-lg-1'}}) }}
+            <div class="col-lg-4">
+            {{ form_errors(edit_form.apellidos) }}
+            {{ form_widget(edit_form.apellidos) }}
+            </div>
+        </div>
+        <div class="form-group">
+            {{ form_label(edit_form.incidencia, null, {'label_attr': {'class': 'control-label col-lg-1'}}) }}
+            <div class="col-lg-6">
+            {{ form_errors(edit_form.incidencia) }}
+            {{ form_widget(edit_form.incidencia) }}
+            </div>
+        </div>
+        <div class="form-group">
+            {{ form_label(edit_form.motivo, null, {'label_attr': {'class': 'control-label col-lg-1'}}) }}
+            <div class="col-lg-6">
+            {{ form_errors(edit_form.motivo) }}
+            {{ form_widget(edit_form.motivo) }}
+            </div>
+        </div>
+        <div class="form-group">
+            {{ form_label(edit_form.solucion, null, {'label_attr': {'class': 'control-label col-lg-1'}}) }}
+            <div class="col-lg-6">
+            {{ form_errors(edit_form.solucion) }}
+            {{ form_widget(edit_form.solucion) }}
+            </div>
+        </div>
+        <div class="form-group">
+            {{ form_label(edit_form.unidad, null, {'label_attr': {'class': 'control-label col-lg-1'}}) }}
+            <div class="col-lg-6">
+            {{ form_errors(edit_form.unidad) }}
+            {{ form_widget(edit_form.unidad) }}
+            </div>
+        </div>
+        <div class="form-group">
+            {{ form_label(edit_form.tecnico, null, {'label_attr': {'class': 'control-label col-lg-1'}}) }}
+            <div class="col-lg-6">
+            {{ form_errors(edit_form.tecnico) }}
+            {{ form_widget(edit_form.tecnico) }}
+            </div>
+        </div>
+        <div class="form-group">
+            {{ form_label(edit_form.categoria, null, {'label_attr': {'class': 'control-label col-lg-1'}}) }}
+            <div class="col-lg-6">
+            {{ form_errors(edit_form.categoria) }}
+            {{ form_widget(edit_form.categoria) }}
+            </div>
+        </div>
+        <div class="form-group">
+            {{ form_label(edit_form.tarea, null, {'label_attr': {'class': 'control-label col-lg-1'}}) }}
+            <div class="col-lg-6">
+            {{ form_errors(edit_form.tarea) }}
+            {{ form_widget(edit_form.tarea) }}
+            </div>
+        </div>
+            {{ form_rest(edit_form) }}
+        <div class="form-group">
+            <div class="col-lg-6 col-lg-offset-1">
+                <button class="btn btn-primary" type="submit">Editar</button>
+                <a class="btn btn-primary" href="{{ path('incidencia') }}">Listado</a>
+            </div>
+        </div>
+    </form>
+
+    <div class="form-group">
+        <div class="col-lg-6 col-lg-offset-1">
+            <form action="{{ path('incidencia_delete', { 'id': entity.id }) }}" method="post">
+                <input type="hidden" name="_method" value="DELETE" />
+                {{ form_widget(delete_form) }}
+                <button class="btn btn-danger" type="submit">Eliminar</button>
+            </form>
+        </div>
+    </div>
+</div>
+</div>
+{% endblock %}
