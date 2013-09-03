@@ -157,6 +157,7 @@ class IncidenciaController extends Controller
         if ($editForm->isValid()) {
             $em->persist($entity);
             $em->flush();
+            $this->get('session')->getFlashBag()->add('success', 'La Incidencia ha sido actualizada!');
 
             return $this->redirect($this->generateUrl('incidencia_edit', array('id' => $id)));
         }

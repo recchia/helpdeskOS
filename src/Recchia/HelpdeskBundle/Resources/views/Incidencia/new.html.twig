@@ -12,6 +12,7 @@
         <div class="form-group">
             {{ form_label(form.cedula, null, {'label_attr': {'class': 'control-label col-lg-1'}}) }}
             <div class="input-group col-lg-3">
+            <span class="input-group-addon glyphicon glyphicon-search"></span>
             {{ form_errors(form.cedula) }}
             {{ form_widget(form.cedula) }}
             <span class="input-group-btn">
@@ -85,8 +86,8 @@
             {{ form_rest(form) }}
         <div class="form-group">
             <div class="col-lg-6 col-lg-offset-1">
-               <button class="btn btn-primary" type="submit">Crear</button>
-                <a class="btn btn-primary" href="{{ path('incidencia') }}">Listado</a> 
+               <button class="btn btn-primary" type="submit"><span class="glyphicon glyphicon-save"></span> Guardar</button>
+                <a class="btn btn-primary" href="{{ path('incidencia') }}"><span class="glyphicon glyphicon-list"></span> Listado</a> 
             </div>
         </div>
     </fieldset>

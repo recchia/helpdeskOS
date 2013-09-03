@@ -12,6 +12,7 @@
         <div class="form-group">
             {{ form_label(edit_form.cedula, null, {'label_attr': {'class': 'control-label col-lg-1'}}) }}
             <div class="input-group col-lg-3">
+            <span class="input-group-addon glyphicon glyphicon-search"></span>
             {{ form_errors(edit_form.cedula) }}
             {{ form_widget(edit_form.cedula) }}
             <span class="input-group-btn">
@@ -85,8 +86,8 @@
             {{ form_rest(edit_form) }}
         <div class="form-group">
             <div class="col-lg-6 col-lg-offset-1">
-                <button class="btn btn-primary" type="submit">Editar</button>
-                <a class="btn btn-primary" href="{{ path('incidencia') }}">Listado</a>
+                <button class="btn btn-primary" type="submit"><span class="glyphicon glyphicon-save"></span> Guardar</button>
+                <a class="btn btn-primary" href="{{ path('incidencia') }}"><span class="glyphicon glyphicon-list"></span> Listado</a>
             </div>
         </div>
     </form>
@@ -96,7 +97,7 @@
             <form action="{{ path('incidencia_delete', { 'id': entity.id }) }}" method="post">
                 <input type="hidden" name="_method" value="DELETE" />
                 {{ form_widget(delete_form) }}
-                <button class="btn btn-danger" type="submit">Eliminar</button>
+                <button class="btn btn-danger" type="submit"><span class="glyphicon glyphicon-trash"></span> Eliminar</button>
             </form>
         </div>
     </div>

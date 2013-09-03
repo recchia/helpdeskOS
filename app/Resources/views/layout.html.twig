@@ -19,21 +19,21 @@
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li></span><a href="{{ path("homepage") }}">Inicio</a></li>
+                    <li></span><a href="{{ path("homepage") }}"><span class="glyphicon glyphicon-home"></span> Inicio</a></li>
                     <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Incidencias <b class="caret"></b></a>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-tasks"></span> Incidencias <b class="caret"></b></a>
                         <ul class="dropdown-menu">
                             <li><a href="{{ path("incidencia_new") }}">Registar Incidencia</a></li>
                             <li><a href="{{ path("incidencia") }}">Ver Incidencias</a></li>
                         </ul>
                     </li>
-                    <li><a href="{{ path("sonata_admin_dashboard") }}">Administración</a></li>
+                    <li><a href="{{ path("sonata_admin_dashboard") }}"><span class="glyphicon glyphicon-lock"></span> Administración</a></li>
                     <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Mi Cuenta <b class="caret"></b></a>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-user"></span> Mi Cuenta <b class="caret"></b></a>
                         <ul class="dropdown-menu">
-                            <li><a href="{{ path("fos_user_change_password") }}">Cambiar Contraseña</a></li>
+                            <li><a href="{{ path("fos_user_change_password") }}"><span class="glyphicon glyphicon-edit"></span> Cambiar Contraseña</a></li>
                             <li class="divider"></li>
-                            <li><a href="{{ path("fos_user_security_logout") }}">Cerrar Sesión</a></li>
+                            <li><a href="{{ path("fos_user_security_logout") }}"><span class="glyphicon glyphicon-log-out"></span> Cerrar Sesión</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -46,7 +46,7 @@
       {% for flashMessage in app.session.flashbag.get('success') %}
             <div class="alert alert-success alert-dismissable">
                 <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-            {{ flashMessage }}
+                <span class="glyphicon glyphicon-saved"></span> {{ flashMessage }}
             </div>
       {% endfor %}
       {% endif %}

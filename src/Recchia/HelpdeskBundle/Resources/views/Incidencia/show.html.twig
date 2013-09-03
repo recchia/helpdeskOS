@@ -1,16 +1,12 @@
 {% extends '::layout.html.twig' %}
 
 {% block content -%}
-    <h1>Incidencia</h1>
-
-    <table class="record_properties">
+<div class="panel panel-primary">
+  <div class="panel-heading">Incidencia # {{ entity.id }}</div>
+  <table class="table">
         <tbody>
             <tr>
-                <th>Id</th>
-                <td>{{ entity.id }}</td>
-            </tr>
-            <tr>
-                <th>Cedula</th>
+                <th>Cédula</th>
                 <td>{{ entity.cedula }}</td>
             </tr>
             <tr>
@@ -30,29 +26,24 @@
                 <td>{{ entity.motivo }}</td>
             </tr>
             <tr>
-                <th>Solucion</th>
+                <th>Solución</th>
                 <td>{{ entity.solucion }}</td>
             </tr>
         </tbody>
     </table>
+</div>
 
-        <ul class="record_actions">
-    <li>
-        <a href="{{ path('incidencia') }}">
-            Back to the list
+<div class="well">
+    <form action="{{ path('incidencia_delete', { 'id': entity.id }) }}" class="form-inline" method="post">
+        <input type="hidden" name="_method" value="DELETE" />
+        {{ form_widget(delete_form) }}
+        <a class="btn btn-primary" href="{{ path('incidencia') }}">
+            <span class="glyphicon glyphicon-list"></span> Listado
         </a>
-    </li>
-    <li>
-        <a href="{{ path('incidencia_edit', { 'id': entity.id }) }}">
-            Edit
+        <a class="btn btn-primary" href="{{ path('incidencia_edit', { 'id': entity.id }) }}">
+            <span class="glyphicon glyphicon-edit"></span> Editar
         </a>
-    </li>
-    <li>
-        <form action="{{ path('incidencia_delete', { 'id': entity.id }) }}" method="post">
-            <input type="hidden" name="_method" value="DELETE" />
-            {{ form_widget(delete_form) }}
-            <button class="btn btn-danger" type="submit">Delete</button>
-        </form>
-    </li>
-</ul>
+        <button class="btn btn-danger" type="submit"><span class="glyphicon glyphicon-trash"></span> Eliminar</button>
+    </form>
+</div>
 {% endblock %}
