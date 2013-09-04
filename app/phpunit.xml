@@ -34,6 +34,9 @@
                 <directory>../src/*/*Bundle/Tests</directory>
                 <directory>../src/*/Bundle/*Bundle/Resources</directory>
                 <directory>../src/*/Bundle/*Bundle/Tests</directory>
+                <directory>../src/Application</directory>
+                <directory>../src/*/*Bundle/Admin</directory>
+                <directory>../src/*/*Bundle/DependencyInjection</directory>
             </exclude>
         </whitelist>
     </filter>
