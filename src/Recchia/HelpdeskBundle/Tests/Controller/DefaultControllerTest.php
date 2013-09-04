@@ -3,15 +3,37 @@
 namespace Recchia\HelpdeskBundle\Tests\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
+use Symfony\Component\BrowserKit\Cookie;
+use Symfony\Component\Security\Core\Authentication\Token\UsernamePasswordToken;
 
 class DefaultControllerTest extends WebTestCase
 {
-    public function testIndex()
+    private $client = null;
+    
+    public function setUp()
     {
-        $client = static::createClient();
+        $this->client = static::createClient();
+    }
 
-        $crawler = $client->request('GET', '/hello/Fabien');
+    public function testSecureIndex()
+    {
+        $this->logIn();
 
-        $this->assertTrue($crawler->filter('html:contains("Hello Fabien")')->count() > 0);
+        $crawler = $this->client->request('GET', '/');
+
+        $this->assertTrue($this->client->getResponse()->isSuccessful());
+        $this->assertGreaterThan(0, $crawler->filter('html:contains("HelpdeskOS")')->count());
+    }
+    
+    public function logIn()
+    {
+        $session = $this->client->getContainer()->get('session');
+        $firewall = 'main';
+        $token = new UsernamePasswordToken('recchia', null, $firewall, array('ROLE_ADMIN'));
+        $session->set('_security_'.$firewall, serialize($token));
+        $session->save();
+        
+        $cookie = new Cookie($session->getName(), $session->getId());
+        $this->client->getCookieJar()->set($cookie);
     }
 }

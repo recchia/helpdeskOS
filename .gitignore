@@ -11,6 +11,7 @@
 /nbproject
 /app/config/parameters.yml
 composer.lock
+phpunit.xml
 *.php~
 TextMate2
 .buildpath
