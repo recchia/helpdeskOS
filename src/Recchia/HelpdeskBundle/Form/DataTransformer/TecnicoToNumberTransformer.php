@@ -15,9 +15,9 @@ namespace Recchia\HelpdeskBundle\Form\DataTransformer;
 use Symfony\Component\Form\DataTransformerInterface;
 use Symfony\Component\Form\Exception\TransformationFailedException;
 use Doctrine\Common\Persistence\ObjectManager;
-use Recchia\HelpdeskBundle\Entity\Tarea;
+use Application\Sonata\UserBundle\Entity\User;
 
-class TareaToNumberTransformer implements DataTransformerInterface {
+class TecnicoToNumberTransformer implements DataTransformerInterface {
     
     /**
     * @var ObjectManager
@@ -33,26 +33,26 @@ class TareaToNumberTransformer implements DataTransformerInterface {
     }
 
     /**
-    * Transforms an object (Tarea) to a string (number).
+    * Transforms an object (User) to a string (number).
     *
     * @param Tarea|null $tarea
     * @return string
     */
-    public function transform($tarea)
+    public function transform($tecnico)
     {
-        if (null === $tarea) {
-            return "";
+        if (null === $tecnico) {
+            return null;
         }
 
-        return $tarea->getId();
+        return $tecnico->getId();
     }
 
     /**
-    * Transforms a string (number) to an object (Tarea).
+    * Transforms a string (number) to an object (User).
     *
     * @param string $id
     * @return Tarea|null
-    * @throws TransformationFailedException if object (Tarea) is not found.
+    * @throws TransformationFailedException if object (User) is not found.
     */
     public function reverseTransform($id)
     {
@@ -60,19 +60,19 @@ class TareaToNumberTransformer implements DataTransformerInterface {
             return null;
         }
 
-        $tarea = $this->om
-            ->getRepository('HelpdeskBundle:Tarea')
+        $tecnico = $this->om
+            ->getRepository('Application\Sonata\UserBundle\Entity\User')
             ->findOneBy(array('id' => $id))
         ;
 
-        if (null === $tarea) {
+        if (null === $tecnico) {
             throw new TransformationFailedException(sprintf(
-                'La Tarea con id "%s" no existe!',
+                'El técnico con id "%s" no existe!',
                 $id
             ));
         }
 
-        return $tarea;
+        return $tecnico;
     }
 }
 

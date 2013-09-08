@@ -14,11 +14,11 @@ namespace Recchia\HelpdeskBundle\Form\Type;
 
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
-use Recchia\HelpdeskBundle\Form\DataTransformer\TareaToNumberTransformer;
+use Recchia\HelpdeskBundle\Form\DataTransformer\TecnicoToNumberTransformer;
 use Doctrine\Common\Persistence\ObjectManager;
 use Symfony\Component\OptionsResolver\OptionsResolverInterface;
 
-class TareaSelectorType extends AbstractType {
+class TecnicoInputType extends AbstractType {
     
     /**
     * @var ObjectManager
@@ -35,25 +35,25 @@ class TareaSelectorType extends AbstractType {
 
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
-        $transformer = new TareaToNumberTransformer($this->om);
+        $transformer = new TecnicoToNumberTransformer($this->om);
         $builder->addModelTransformer($transformer);
     }
 
     public function setDefaultOptions(OptionsResolverInterface $resolver)
     {
         $resolver->setDefaults(array(
-            'invalid_message' => 'La tarea seleccionada no existe',
+            'invalid_message' => 'El técnico seleccionado no existe',
         ));
     }
 
     public function getParent()
     {
-        return 'choice';
+        return 'hidden';
     }
 
     public function getName()
     {
-        return 'tarea_selector';
+        return 'tecnico_input';
     }
 }
 

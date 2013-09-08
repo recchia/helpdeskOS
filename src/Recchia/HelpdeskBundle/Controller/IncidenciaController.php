@@ -45,7 +45,9 @@ class IncidenciaController extends Controller
     public function createAction(Request $request)
     {
         $entity  = new Incidencia();
-        $form = $this->createForm(new IncidenciaType(), $entity);
+        $securityContext = $this->container->get('security.context');
+        $user = $securityContext->getToken()->getUser();
+        $form = $this->createForm(new IncidenciaType($user), $entity);
         $form->bind($request);
 
         if ($form->isValid()) {
@@ -73,7 +75,10 @@ class IncidenciaController extends Controller
     public function newAction()
     {
         $entity = new Incidencia();
-        $form   = $this->createForm(new IncidenciaType(), $entity);
+        $securityContext = $this->container->get('security.context');
+        $user = $securityContext->getToken()->getUser();
+        $form   = $this->createForm(new IncidenciaType($user), $entity);
+        $form->get('tecnico')->setData($user);
 
         return array(
             'entity' => $entity,
@@ -123,7 +128,9 @@ class IncidenciaController extends Controller
             throw $this->createNotFoundException('Unable to find Incidencia entity.');
         }
 
-        $editForm = $this->createForm(new IncidenciaType(), $entity);
+        $securityContext = $this->container->get('security.context');
+        $user = $securityContext->getToken()->getUser();
+        $editForm = $this->createForm(new IncidenciaType($user), $entity);
         $deleteForm = $this->createDeleteForm($id);
 
         return array(
@@ -151,7 +158,9 @@ class IncidenciaController extends Controller
         }
 
         $deleteForm = $this->createDeleteForm($id);
-        $editForm = $this->createForm(new IncidenciaType(), $entity);
+        $securityContext = $this->container->get('security.context');
+        $user = $securityContext->getToken()->getUser();
+        $editForm = $this->createForm(new IncidenciaType($user), $entity);
         $editForm->bind($request);
 
         if ($editForm->isValid()) {

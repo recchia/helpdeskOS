@@ -168,8 +168,8 @@ services:
       - { name: sonata.admin, manager_type: orm, group: Helpdesk, label: Tarea }
     arguments: [ null, Recchia\HelpdeskBundle\Entity\Tarea, null ]
   
-  recchia.type.tarea_selector:
-        class: Recchia\HelpdeskBundle\Form\Type\TareaSelectorType
+  recchia.type.tecnico_input:
+        class: Recchia\HelpdeskBundle\Form\Type\TecnicoInputType
         arguments: ["@doctrine.orm.entity_manager"]
         tags:
-            - { name: form.type, alias: tarea_selector }
+            - { name: form.type, alias: tecnico_input }
