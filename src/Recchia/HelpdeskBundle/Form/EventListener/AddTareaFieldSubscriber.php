@@ -38,9 +38,8 @@ class AddTareaFieldSubscriber implements EventSubscriberInterface {
     private function addTareaForm($form, $categoria) {
         $form->add($this->factory->createNamed('tarea', 'entity', null, array(
                     'class' => 'HelpdeskBundle:Tarea',
-                    'empty_value' => '*** Seleccione ***',
+                    'empty_value' => '*** Seleccione una Tarea ***',
                     'auto_initialize' => false,
-                    'attr' => array('class' => 'form-control'),
                     'query_builder' => function (EntityRepository $repository) use ($categoria) {
                         $qb = $repository->createQueryBuilder('tarea')
                                 ->innerJoin('tarea.categoria', 'categoria');

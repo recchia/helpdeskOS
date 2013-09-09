@@ -1,5 +1,10 @@
 {% extends '::layout.html.twig' %}
 
+{% block stylesheets %}
+{{ parent() }}
+<link href="{{ asset("css/select2.css") }}" rel="stylesheet" media="screen">
+{% endblock %}
+
 {% block content -%}
     <h2>Editar Registro</h2>
 <div class="row">
@@ -7,100 +12,189 @@
     <form action="{{ path('incidencia_update', { 'id': entity.id }) }}" class="form-horizontal" method="post" {{ form_enctype(edit_form) }}>
         <input type="hidden" name="_method" value="PUT" />
         <fieldset>
+        <legend>Datos del Usuario</legend>
+        {% if not edit_form.vars.valid %}
+        <div class="alert alert-danger alert-dismissable">
+            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+            {{ form_errors(edit_form) }}
+        </div>
+        {% endif %}
+        <div class="col-lg-6">
+            <div class="form-group">
+                {{ form_label(edit_form.cedula, null, {'label_attr': {'class': 'control-label col-lg-2'}}) }}
+                <div class="input-group col-lg-6">
+                <span class="input-group-addon glyphicon glyphicon-search"></span>
+                {{ form_errors(edit_form.cedula) }}
+                {{ form_widget(edit_form.cedula) }}
+                <span class="input-group-btn">
+                  <button class="btn btn-default" type="button">Buscar</button>
+                </span>
+                </div>
+            </div>
+            <div class="form-group">
+                {{ form_label(edit_form.nombres, null, {'label_attr': {'class': 'control-label col-lg-2'}}) }}
+                <div class="col-lg-6">
+                {{ form_errors(edit_form.nombres) }}
+                {{ form_widget(edit_form.nombres) }}
+                </div>
+            </div>
+            <div class="form-group">
+                {{ form_label(edit_form.apellidos, null, {'label_attr': {'class': 'control-label col-lg-2'}}) }}
+                <div class="col-lg-6">
+                {{ form_errors(edit_form.apellidos) }}
+                {{ form_widget(edit_form.apellidos) }}
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-lg-6">
+            <div class="form-group">
+                {{ form_label(edit_form.unidad, null, {'label_attr': {'class': 'control-label col-lg-2'}}) }}
+                <div class="col-lg-8">
+                {{ form_errors(edit_form.unidad) }}
+                {{ form_widget(edit_form.unidad) }}
+                </div>
+            </div>
+            {% if edit_form.datos_tecnico is defined %}
+            <div class="form-group">
+                {{ form_label(edit_form.tecnico, null, { 'label': 'Técnico','label_attr': {'class': 'control-label col-lg-2'}}) }}
+                <div class="col-lg-8">
+                {{ form_widget(edit_form.datos_tecnico) }}
+                </div>
+            </div>
+            {% else %}
+            <div class="form-group">
+                {{ form_label(edit_form.tecnico, null, { 'label': 'Técnico','label_attr': {'class': 'control-label col-lg-2'}}) }}
+                <div class="col-lg-8">
+                {{ form_errors(edit_form.tecnico) }}
+                {{ form_widget(edit_form.tecnico) }}
+                </div>
+            </div>
+            {% endif %}
+            <div class="form-group">
+                {{ form_label(edit_form.categoria, null, {'label_attr': {'class': 'control-label col-lg-2'}}) }}
+                <div class="col-lg-8">
+                {{ form_errors(edit_form.categoria) }}
+                {{ form_widget(edit_form.categoria) }}
+                </div>
+            </div>
+            <div class="form-group">
+                {{ form_label(edit_form.tarea, null, {'label_attr': {'class': 'control-label col-lg-2'}}) }}
+                <div class="col-lg-8">
+                {{ form_errors(edit_form.tarea) }}
+                {{ form_widget(edit_form.tarea) }}
+                </div>
+            </div>
+        </div>
+    </fieldset>
+    <fieldset>
         <legend>Datos de la Incidencia</legend>
-        {{ form_errors(edit_form) }}
-        <div class="form-group">
-            {{ form_label(edit_form.cedula, null, {'label_attr': {'class': 'control-label col-lg-1'}}) }}
-            <div class="input-group col-lg-3">
-            <span class="input-group-addon glyphicon glyphicon-search"></span>
-            {{ form_errors(edit_form.cedula) }}
-            {{ form_widget(edit_form.cedula) }}
-            <span class="input-group-btn">
-              <button class="btn btn-default" type="button">Buscar</button>
-            </span>
+        <div class="col-lg-12">
+            <div class="form-group">
+                {{ form_label(edit_form.incidencia, null, {'label_attr': {'class': 'control-label col-lg-1'}}) }}
+                <div class="col-lg-10">
+                {{ form_errors(edit_form.incidencia) }}
+                {{ form_widget(edit_form.incidencia) }}
+                </div>
+            </div>
+            <div class="form-group">
+                {{ form_label(edit_form.motivo, null, {'label_attr': {'class': 'control-label col-lg-1'}}) }}
+                <div class="col-lg-10">
+                {{ form_errors(edit_form.motivo) }}
+                {{ form_widget(edit_form.motivo) }}
+                </div>
+            </div>
+            <div class="form-group">
+                {{ form_label(edit_form.solucion, null, {'label_attr': {'class': 'control-label col-lg-1'}}) }}
+                <div class="col-lg-10">
+                {{ form_errors(edit_form.solucion) }}
+                {{ form_widget(edit_form.solucion) }}
+                </div>
             </div>
         </div>
+    
+        {{ form_rest(edit_form) }}
+        
         <div class="form-group">
-            {{ form_label(edit_form.nombres, null, {'label_attr': {'class': 'control-label col-lg-1'}}) }}
-            <div class="col-lg-4">
-            {{ form_errors(edit_form.nombres) }}
-            {{ form_widget(edit_form.nombres) }}
-            </div>
-        </div>
-        <div class="form-group">
-            {{ form_label(edit_form.apellidos, null, {'label_attr': {'class': 'control-label col-lg-1'}}) }}
-            <div class="col-lg-4">
-            {{ form_errors(edit_form.apellidos) }}
-            {{ form_widget(edit_form.apellidos) }}
-            </div>
-        </div>
-        <div class="form-group">
-            {{ form_label(edit_form.incidencia, null, {'label_attr': {'class': 'control-label col-lg-1'}}) }}
-            <div class="col-lg-6">
-            {{ form_errors(edit_form.incidencia) }}
-            {{ form_widget(edit_form.incidencia) }}
-            </div>
-        </div>
-        <div class="form-group">
-            {{ form_label(edit_form.motivo, null, {'label_attr': {'class': 'control-label col-lg-1'}}) }}
-            <div class="col-lg-6">
-            {{ form_errors(edit_form.motivo) }}
-            {{ form_widget(edit_form.motivo) }}
-            </div>
-        </div>
-        <div class="form-group">
-            {{ form_label(edit_form.solucion, null, {'label_attr': {'class': 'control-label col-lg-1'}}) }}
-            <div class="col-lg-6">
-            {{ form_errors(edit_form.solucion) }}
-            {{ form_widget(edit_form.solucion) }}
-            </div>
-        </div>
-        <div class="form-group">
-            {{ form_label(edit_form.unidad, null, {'label_attr': {'class': 'control-label col-lg-1'}}) }}
-            <div class="col-lg-6">
-            {{ form_errors(edit_form.unidad) }}
-            {{ form_widget(edit_form.unidad) }}
-            </div>
-        </div>
-        <div class="form-group">
-            {{ form_label(edit_form.tecnico, null, {'label_attr': {'class': 'control-label col-lg-1'}}) }}
-            <div class="col-lg-6">
-            {{ form_errors(edit_form.tecnico) }}
-            {{ form_widget(edit_form.tecnico) }}
-            </div>
-        </div>
-        <div class="form-group">
-            {{ form_label(edit_form.categoria, null, {'label_attr': {'class': 'control-label col-lg-1'}}) }}
-            <div class="col-lg-6">
-            {{ form_errors(edit_form.categoria) }}
-            {{ form_widget(edit_form.categoria) }}
-            </div>
-        </div>
-        <div class="form-group">
-            {{ form_label(edit_form.tarea, null, {'label_attr': {'class': 'control-label col-lg-1'}}) }}
-            <div class="col-lg-6">
-            {{ form_errors(edit_form.tarea) }}
-            {{ form_widget(edit_form.tarea) }}
-            </div>
-        </div>
-            {{ form_rest(edit_form) }}
-        <div class="form-group">
-            <div class="col-lg-6 col-lg-offset-1">
+            <div class="col-lg-12 text-center">
                 <button class="btn btn-primary" type="submit"><span class="glyphicon glyphicon-save"></span> Guardar</button>
                 <a class="btn btn-primary" href="{{ path('incidencia') }}"><span class="glyphicon glyphicon-list"></span> Listado</a>
+                <a class="btn btn-danger" data-toggle="modal" href="#confimar-eliminar" ><span class="glyphicon glyphicon-trash"></span> Eliminar</a>
             </div>
         </div>
+    </fieldset>
     </form>
-
-    <div class="form-group">
-        <div class="col-lg-6 col-lg-offset-1">
+</div>
+</div>
+    
+<div class="modal fade" id="confimar-eliminar" tabindex="-1" role="dialog" aria-labelledby="HelpdeskOS" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title"><span class="glyphicon glyphicon-trash"></span> HelpdeskOS</h4>
+      </div>
+      <div class="modal-body">
+        <p>¿Desea realmente eliminar la Incidencia # {{ edit_form.vars.value.id }}?</p>
+      </div>
+      <div class="modal-footer">
+        
+        <div class="form-group">
             <form action="{{ path('incidencia_delete', { 'id': entity.id }) }}" method="post">
                 <input type="hidden" name="_method" value="DELETE" />
                 {{ form_widget(delete_form) }}
+                <button type="button" class="btn btn-warning" data-dismiss="modal">Cancelar</button>
                 <button class="btn btn-danger" type="submit"><span class="glyphicon glyphicon-trash"></span> Eliminar</button>
             </form>
         </div>
+      </div>
     </div>
+  </div>
 </div>
-</div>
+{% endblock %}
+
+{% block javascripts %}
+{{ parent() }}
+<script src="{{ asset("js/select2.min.js") }}"></script>
+<script src="{{ asset("js/select2_locale_es.js") }}"></script>
+<script type="text/javascript">
+    $(document).ready(function() {
+        $("#inass_helpdeskbundle_incidenciatype_unidad").select2({ width: '25em' });
+        $("#inass_helpdeskbundle_incidenciatype_tecnico").select2({ width: '25em' });
+        $("#inass_helpdeskbundle_incidenciatype_categoria").select2({ width: '25em' });
+        $("#inass_helpdeskbundle_incidenciatype_tarea").select2({ width: '25em' });
+        
+        $("#inass_helpdeskbundle_incidenciatype_categoria").on('change', function(){
+            cargarCombo('{{ path("tareasByCategoria") }}', $(this), $("#inass_helpdeskbundle_incidenciatype_tarea"));
+        });
+        
+        $("#eliminar").click(function(){
+            
+        });
+        /*$("#buscar").click(function(){
+            var cedulaField = document.getElementById("inass_helpdeskbundle_incidenciatype_cedula");
+            var contenido = cedulaField.value;
+            var expresion = /^[0-9]+$/;
+            if(!expresion.test(contenido)) {
+                alert("¡Solo se aceptan números sin puntos ni comas!");
+            } else {
+                $.ajax({
+                    url: '{# path("buscar_empleado") #}',
+                    data: {
+                        cedula: contenido
+                    },
+                    type: 'POST',
+                    dataType: 'json',
+                    success : function(response) {
+                        $("#inass_helpdeskbundle_incidenciatype_nombres").val(response.nomper);
+                        $("#inass_helpdeskbundle_incidenciatype_apellidos").val(response.apeper);
+                    },
+                    error : function(xhr, status) {
+                        alert( "Petición fallida: " + status + ' '+xhr.statusText );
+                    }
+                });
+            }
+        });*/
+    });
+</script>
 {% endblock %}

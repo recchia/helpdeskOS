@@ -1,5 +1,10 @@
 {% extends '::layout.html.twig' %}
 
+{% block stylesheets %}
+{{ parent() }}
+<link href="{{ asset("css/select2.css") }}" rel="stylesheet" media="screen">
+{% endblock %}
+
 {% block content -%}
 <h2>Nuevo Registro</h2>
 
@@ -11,7 +16,7 @@
         {% if not form.vars.valid %}
         <div class="alert alert-danger alert-dismissable">
             <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-        {{ form_errors(form) }}
+            {{ form_errors(form) }}
         </div>
         {% endif %}
         <div class="col-lg-6">
@@ -123,8 +128,15 @@
 
 {% block javascripts %}
 {{ parent() }}
+<script src="{{ asset("js/select2.min.js") }}"></script>
+<script src="{{ asset("js/select2_locale_es.js") }}"></script>
 <script type="text/javascript">
     $(document).ready(function() {
+        $("#inass_helpdeskbundle_incidenciatype_unidad").select2({ width: '25em' });
+        $("#inass_helpdeskbundle_incidenciatype_tecnico").select2({ width: '25em' });
+        $("#inass_helpdeskbundle_incidenciatype_categoria").select2({ width: '25em' });
+        $("#inass_helpdeskbundle_incidenciatype_tarea").select2({ width: '25em' });
+        
         $("#inass_helpdeskbundle_incidenciatype_categoria").on('change', function(){
             cargarCombo('{{ path("tareasByCategoria") }}', $(this), $("#inass_helpdeskbundle_incidenciatype_tarea"));
         });

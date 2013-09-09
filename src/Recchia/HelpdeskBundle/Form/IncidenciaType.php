@@ -29,16 +29,16 @@ class IncidenciaType extends AbstractType
             ->add('incidencia', 'textarea', array('attr' => array('class' => 'form-control')))
             ->add('motivo', 'textarea', array('attr' => array('class' => 'form-control')))
             ->add('solucion', 'textarea', array('label' => 'Solución', 'attr' => array('class' => 'form-control')))
-            ->add('unidad', null, array('attr' => array('class' => 'form-control'), 'empty_value' => '*** Seleccione ***'))
-            ->add('categoria', null, array('label' => 'Categoría', 'attr' => array('class' => 'form-control'), 'empty_value' => '*** Seleccione ***'))
+            ->add('unidad', null, array('empty_value' => '*** Seleccione una Unidad ***'))
+            ->add('categoria', null, array('label' => 'Categoría', 'empty_value' => '*** Seleccione una Categoría ***'))
         ;
         if ($this->user->hasRole("ROLE_HELPDESK")) {
             $builder
                     ->add('tecnico', 'tecnico_input')
-                    ->add('datos_tecnico', 'text', array('data' => $this->user->getFirstname() . ' ' . $this->user->getLastname(), 'mapped' => false, 'attr' => array('disabled' => true, 'class' => 'form-control')))
+                    ->add('datos_tecnico', 'text', array('data' => $this->user->getFirstname() . ' ' . $this->user->getLastname(), 'mapped' => false, 'attr' => array('disabled' => true)))
                 ;
         } else {
-            $builder->add('tecnico', null, array('empty_value' => '*** Seleccione ***', 'attr' => array('class' => 'form-control')));
+            $builder->add('tecnico', null, array('empty_value' => '*** Seleccione un Técnico ***'));
         }
     }
 
