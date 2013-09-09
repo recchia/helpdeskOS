@@ -27,8 +27,14 @@ class IncidenciaController extends Controller
     public function indexAction()
     {
         $em = $this->getDoctrine()->getManager();
-
-        $entities = $em->getRepository('HelpdeskBundle:Incidencia')->findAll();
+        $dql   = "SELECT i FROM HelpdeskBundle:Incidencia i ORDER BY i.id DESC";
+        $query = $em->createQuery($dql);
+        $paginator  = $this->get('knp_paginator');
+        $entities = $paginator->paginate(
+            $query,
+            $this->get('request')->query->get('page', 1),
+            10
+        );
 
         return array(
             'entities' => $entities,
@@ -200,6 +206,7 @@ class IncidenciaController extends Controller
             $em->remove($entity);
             $em->flush();
         }
+        $this->get('session')->getFlashBag()->add('success', 'La Incidencia ha sido eliminada!');
 
         return $this->redirect($this->generateUrl('incidencia'));
     }

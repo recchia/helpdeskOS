@@ -1,9 +1,11 @@
 {% extends '::layout.html.twig' %}
 
 {% block content -%}
-    <h2>Incidencias</h2>
-
-    <table class="table table-striped table-bordered table-hover">
+<div class="panel panel-default">
+    <div class="panel-body">
+        <h2 class="col-lg-4">Incidencias <small>({{ entities.getTotalItemCount }})</small></h2>
+        <p class="col-lg-8 text-right"><a class="btn btn-primary" href="{{ path('incidencia_new') }}"><span class="glyphicon glyphicon-edit"></span> Nueva Incidencia</a></p>
+    <table class="table table-striped table-hover">
         <thead>
             <tr>
                 <th>#</th>
@@ -14,6 +16,11 @@
                 <th></th>
             </tr>
         </thead>
+        <tfoot>
+            <tr>
+                <td class="text-right" colspan="6">{{ knp_pagination_render(entities) }}</td>
+            </tr>
+        </tfoot>
         <tbody>
         {% for entity in entities %}
             <tr>
@@ -23,8 +30,8 @@
                 <td>{{ entity.apellidos }}</td>
                 <td>{{ entity.incidencia }}</td>
                 <td>
-                    <a class="btn btn-default btn-sm" href="{{ path('incidencia_show', { 'id': entity.id }) }}">ver</a>
-                    <a class="btn btn-default btn-sm" href="{{ path('incidencia_edit', { 'id': entity.id }) }}">editar</a>
+                    <a class="btn btn-success btn-sm" href="{{ path('incidencia_show', { 'id': entity.id }) }}"><span class="glyphicon glyphicon-search"></span> ver</a>
+                    <a class="btn btn-success btn-sm" href="{{ path('incidencia_edit', { 'id': entity.id }) }}"><span class="glyphicon glyphicon-pencil"></span> editar</a>
                 </td>
             </tr>
         
@@ -33,7 +40,6 @@
         {% endfor %}
         </tbody>
     </table>
-    <a class="btn btn-primary" href="{{ path('incidencia_new') }}">
-        Nueva Incidencia
-    </a>
+    </div>
+</div>
 {% endblock %}
