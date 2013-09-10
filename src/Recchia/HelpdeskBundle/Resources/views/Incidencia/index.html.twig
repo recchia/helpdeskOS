@@ -9,9 +9,9 @@
         <thead>
             <tr>
                 <th>#</th>
-                <th>Cédula</th>
-                <th>Nombres</th>
-                <th>Apellidos</th>
+                <th>{{ knp_pagination_sortable(entities, 'Cédula', 'i.cedula') }}</th>
+                <th>{{ knp_pagination_sortable(entities, 'Nombres', 'i.nombres') }}</th>
+                <th>{{ knp_pagination_sortable(entities, 'Apellidos', 'i.apellidos') }}</th>
                 <th>Incidencia</th>
                 <th></th>
             </tr>
