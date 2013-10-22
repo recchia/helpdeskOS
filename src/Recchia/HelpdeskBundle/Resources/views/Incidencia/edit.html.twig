@@ -157,8 +157,11 @@
 {{ parent() }}
 <script src="{{ asset("js/select2.min.js") }}"></script>
 <script src="{{ asset("js/select2_locale_es.js") }}"></script>
+<script src="{{ asset("js/tinymce/tinymce.min.js") }}"></script>
+<script src="{{ asset("js/tinymce/langs/es.js") }}"></script>
 <script type="text/javascript">
     $(document).ready(function() {
+        tinymce.init({selector:'textarea'});
         $("#inass_helpdeskbundle_incidenciatype_unidad").select2({ width: '25em' });
         $("#inass_helpdeskbundle_incidenciatype_tecnico").select2({ width: '25em' });
         $("#inass_helpdeskbundle_incidenciatype_categoria").select2({ width: '25em' });
