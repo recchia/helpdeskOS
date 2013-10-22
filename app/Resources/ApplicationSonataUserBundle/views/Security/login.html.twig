@@ -1,0 +1,23 @@
+{% extends "ApplicationSonataUserBundle::securityLayout.html.twig" %}
+
+{% block fos_user_content %}
+
+<form action="{{ path("fos_user_security_check") }}" method="post" class="form-signin">
+    {% if error %}
+        <div class="alert alert-danger alert-dismissable">
+            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+            {{ error|trans({}, 'FOSUserBundle') }}
+        </div>
+    {% endif %}
+    <input type="hidden" name="_csrf_token" value="{{ csrf_token }}" />
+    <h2 class="form-signin-heading">Helpdesk OS</h2>
+    <input class="form-control" type="text" id="username" name="_username" value="{{ last_username }}" placeholder="{{ 'security.login.username'|trans({}, 'FOSUserBundle') }}" required="required" autofocus />
+    <input class="form-control" type="password" id="password" name="_password" placeholder="{{ 'security.login.password'|trans({}, 'FOSUserBundle') }}" required="required" />
+
+    <label class="checkbox" for="remember_me">
+    <input type="checkbox" id="remember_me" name="_remember_me" value="on" />{{ 'security.login.remember_me'|trans({}, 'FOSUserBundle') }}
+    </label>
+
+    <button class="btn btn-lg btn-primary btn-block" type="submit" id="_submit" name="_submit" ><span class="glyphicon glyphicon-log-in"></span> {{ 'security.login.submit'|trans({}, 'FOSUserBundle') }}</button>
+</form>
+{% endblock fos_user_content %}
