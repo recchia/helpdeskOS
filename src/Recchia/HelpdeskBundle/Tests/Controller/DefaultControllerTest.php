@@ -15,7 +15,7 @@ class DefaultControllerTest extends WebTestCase
         $this->client = static::createClient();
     }
 
-    public function testSecureIndex()
+    public function testIndex()
     {
         $this->logIn();
 
