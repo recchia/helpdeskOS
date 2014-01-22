@@ -139,7 +139,7 @@
 
   <target name="vendors" description="Update vendors">
     <exec executable="/usr/local/bin/php" failonerror="true">
-        <arg value="composer" />
+        <arg value="/usr/local/bin/composer" />
         <arg value="update" />
     </exec>
   </target>
