@@ -138,7 +138,7 @@
   </target>
 
   <target name="vendors" description="Update vendors">
-    <exec executable="php" failonerror="true">
+    <exec executable="/usr/local/bin/php" failonerror="true">
         <arg value="composer.phar" />
         <arg value="update" />
     </exec>

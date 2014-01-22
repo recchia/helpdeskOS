@@ -1,0 +1,585 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1390335825">
+  <project timestamp="1390335825">
+    <package name="Recchia\HelpdeskBundle\Controller">
+      <file name="/home/piero/sources/helpdeskOS/src/Recchia/HelpdeskBundle/Controller/DefaultController.php">
+        <class name="DefaultController" namespace="Recchia\HelpdeskBundle\Controller">
+          <metrics methods="2" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="6" coveredstatements="1" elements="8" coveredelements="2"/>
+        </class>
+        <line num="17" type="method" name="indexAction" crap="1" count="1"/>
+        <line num="19" type="stmt" count="1"/>
+        <line num="25" type="method" name="getTareasByCategoriaAction" crap="2" count="0"/>
+        <line num="27" type="stmt" count="0"/>
+        <line num="28" type="stmt" count="0"/>
+        <line num="29" type="stmt" count="0"/>
+        <line num="30" type="stmt" count="0"/>
+        <line num="31" type="stmt" count="0"/>
+        <line num="35" type="stmt" count="1"/>
+        <metrics loc="34" ncloc="27" classes="1" methods="2" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="6" coveredstatements="1" elements="8" coveredelements="2"/>
+      </file>
+      <file name="/home/piero/sources/helpdeskOS/src/Recchia/HelpdeskBundle/Controller/IncidenciaController.php">
+        <class name="IncidenciaController" namespace="Recchia\HelpdeskBundle\Controller">
+          <metrics methods="9" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="139" coveredstatements="0" elements="148" coveredelements="0"/>
+        </class>
+        <line num="27" type="method" name="indexAction" crap="2" count="0"/>
+        <line num="28" type="stmt" count="0"/>
+        <line num="29" type="stmt" count="0"/>
+        <line num="30" type="stmt" count="0"/>
+        <line num="31" type="stmt" count="0"/>
+        <line num="32" type="stmt" count="0"/>
+        <line num="33" type="stmt" count="0"/>
+        <line num="34" type="stmt" count="0"/>
+        <line num="35" type="stmt" count="0"/>
+        <line num="36" type="stmt" count="0"/>
+        <line num="37" type="stmt" count="0"/>
+        <line num="39" type="stmt" count="0"/>
+        <line num="40" type="stmt" count="0"/>
+        <line num="41" type="stmt" count="0"/>
+        <line num="42" type="stmt" count="0"/>
+        <line num="51" type="method" name="createAction" crap="6" count="0"/>
+        <line num="52" type="stmt" count="0"/>
+        <line num="53" type="stmt" count="0"/>
+        <line num="54" type="stmt" count="0"/>
+        <line num="55" type="stmt" count="0"/>
+        <line num="56" type="stmt" count="0"/>
+        <line num="57" type="stmt" count="0"/>
+        <line num="59" type="stmt" count="0"/>
+        <line num="60" type="stmt" count="0"/>
+        <line num="61" type="stmt" count="0"/>
+        <line num="62" type="stmt" count="0"/>
+        <line num="63" type="stmt" count="0"/>
+        <line num="65" type="stmt" count="0"/>
+        <line num="66" type="stmt" count="0"/>
+        <line num="68" type="stmt" count="0"/>
+        <line num="69" type="stmt" count="0"/>
+        <line num="70" type="stmt" count="0"/>
+        <line num="71" type="stmt" count="0"/>
+        <line num="72" type="stmt" count="0"/>
+        <line num="81" type="method" name="newAction" crap="2" count="0"/>
+        <line num="82" type="stmt" count="0"/>
+        <line num="83" type="stmt" count="0"/>
+        <line num="84" type="stmt" count="0"/>
+        <line num="85" type="stmt" count="0"/>
+        <line num="86" type="stmt" count="0"/>
+        <line num="87" type="stmt" count="0"/>
+        <line num="89" type="stmt" count="0"/>
+        <line num="90" type="stmt" count="0"/>
+        <line num="91" type="stmt" count="0"/>
+        <line num="92" type="stmt" count="0"/>
+        <line num="93" type="stmt" count="0"/>
+        <line num="102" type="method" name="showAction" crap="6" count="0"/>
+        <line num="103" type="stmt" count="0"/>
+        <line num="104" type="stmt" count="0"/>
+        <line num="106" type="stmt" count="0"/>
+        <line num="108" type="stmt" count="0"/>
+        <line num="109" type="stmt" count="0"/>
+        <line num="110" type="stmt" count="0"/>
+        <line num="112" type="stmt" count="0"/>
+        <line num="114" type="stmt" count="0"/>
+        <line num="115" type="stmt" count="0"/>
+        <line num="116" type="stmt" count="0"/>
+        <line num="117" type="stmt" count="0"/>
+        <line num="118" type="stmt" count="0"/>
+        <line num="127" type="method" name="editAction" crap="6" count="0"/>
+        <line num="128" type="stmt" count="0"/>
+        <line num="129" type="stmt" count="0"/>
+        <line num="131" type="stmt" count="0"/>
+        <line num="133" type="stmt" count="0"/>
+        <line num="134" type="stmt" count="0"/>
+        <line num="135" type="stmt" count="0"/>
+        <line num="137" type="stmt" count="0"/>
+        <line num="138" type="stmt" count="0"/>
+        <line num="139" type="stmt" count="0"/>
+        <line num="140" type="stmt" count="0"/>
+        <line num="142" type="stmt" count="0"/>
+        <line num="143" type="stmt" count="0"/>
+        <line num="144" type="stmt" count="0"/>
+        <line num="145" type="stmt" count="0"/>
+        <line num="146" type="stmt" count="0"/>
+        <line num="147" type="stmt" count="0"/>
+        <line num="156" type="method" name="updateAction" crap="12" count="0"/>
+        <line num="157" type="stmt" count="0"/>
+        <line num="158" type="stmt" count="0"/>
+        <line num="160" type="stmt" count="0"/>
+        <line num="162" type="stmt" count="0"/>
+        <line num="163" type="stmt" count="0"/>
+        <line num="164" type="stmt" count="0"/>
+        <line num="166" type="stmt" count="0"/>
+        <line num="167" type="stmt" count="0"/>
+        <line num="168" type="stmt" count="0"/>
+        <line num="169" type="stmt" count="0"/>
+        <line num="170" type="stmt" count="0"/>
+        <line num="172" type="stmt" count="0"/>
+        <line num="173" type="stmt" count="0"/>
+        <line num="174" type="stmt" count="0"/>
+        <line num="175" type="stmt" count="0"/>
+        <line num="177" type="stmt" count="0"/>
+        <line num="178" type="stmt" count="0"/>
+        <line num="180" type="stmt" count="0"/>
+        <line num="181" type="stmt" count="0"/>
+        <line num="182" type="stmt" count="0"/>
+        <line num="183" type="stmt" count="0"/>
+        <line num="184" type="stmt" count="0"/>
+        <line num="185" type="stmt" count="0"/>
+        <line num="193" type="method" name="deleteAction" crap="12" count="0"/>
+        <line num="194" type="stmt" count="0"/>
+        <line num="195" type="stmt" count="0"/>
+        <line num="196" type="stmt" count="0"/>
+        <line num="198" type="stmt" count="0"/>
+        <line num="199" type="stmt" count="0"/>
+        <line num="200" type="stmt" count="0"/>
+        <line num="202" type="stmt" count="0"/>
+        <line num="203" type="stmt" count="0"/>
+        <line num="204" type="stmt" count="0"/>
+        <line num="206" type="stmt" count="0"/>
+        <line num="207" type="stmt" count="0"/>
+        <line num="208" type="stmt" count="0"/>
+        <line num="209" type="stmt" count="0"/>
+        <line num="211" type="stmt" count="0"/>
+        <line num="212" type="stmt" count="0"/>
+        <line num="221" type="method" name="createDeleteForm" crap="2" count="0"/>
+        <line num="222" type="stmt" count="0"/>
+        <line num="223" type="stmt" count="0"/>
+        <line num="224" type="stmt" count="0"/>
+        <line num="225" type="stmt" count="0"/>
+        <line num="226" type="stmt" count="0"/>
+        <line num="227" type="stmt" count="0"/>
+        <line num="235" type="method" name="getDatosEmpleadoAction" crap="12" count="0"/>
+        <line num="236" type="stmt" count="0"/>
+        <line num="237" type="stmt" count="0"/>
+        <line num="238" type="stmt" count="0"/>
+        <line num="239" type="stmt" count="0"/>
+        <line num="240" type="stmt" count="0"/>
+        <line num="241" type="stmt" count="0"/>
+        <line num="242" type="stmt" count="0"/>
+        <line num="243" type="stmt" count="0"/>
+        <line num="244" type="stmt" count="0"/>
+        <line num="245" type="stmt" count="0"/>
+        <line num="246" type="stmt" count="0"/>
+        <line num="247" type="stmt" count="0"/>
+        <line num="248" type="stmt" count="0"/>
+        <line num="249" type="stmt" count="0"/>
+        <line num="250" type="stmt" count="0"/>
+        <metrics loc="251" ncloc="185" classes="1" methods="9" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="139" coveredstatements="0" elements="148" coveredelements="0"/>
+      </file>
+    </package>
+    <package name="Recchia\HelpdeskBundle\Entity">
+      <file name="/home/piero/sources/helpdeskOS/src/Recchia/HelpdeskBundle/Entity/Categoria.php">
+        <class name="Categoria" namespace="Recchia\HelpdeskBundle\Entity">
+          <metrics methods="11" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="47" coveredstatements="0" elements="58" coveredelements="0"/>
+        </class>
+        <line num="51" type="method" name="__construct" crap="2" count="0"/>
+        <line num="52" type="stmt" count="0"/>
+        <line num="53" type="stmt" count="0"/>
+        <line num="54" type="stmt" count="0"/>
+        <line num="55" type="stmt" count="0"/>
+        <line num="62" type="method" name="getId" crap="2" count="0"/>
+        <line num="63" type="stmt" count="0"/>
+        <line num="64" type="stmt" count="0"/>
+        <line num="65" type="stmt" count="0"/>
+        <line num="73" type="method" name="setDescripcion" crap="2" count="0"/>
+        <line num="74" type="stmt" count="0"/>
+        <line num="75" type="stmt" count="0"/>
+        <line num="77" type="stmt" count="0"/>
+        <line num="78" type="stmt" count="0"/>
+        <line num="85" type="method" name="getDescripcion" crap="2" count="0"/>
+        <line num="86" type="stmt" count="0"/>
+        <line num="87" type="stmt" count="0"/>
+        <line num="88" type="stmt" count="0"/>
+        <line num="95" type="method" name="__toString" crap="2" count="0"/>
+        <line num="96" type="stmt" count="0"/>
+        <line num="97" type="stmt" count="0"/>
+        <line num="105" type="method" name="addIncidencia" crap="2" count="0"/>
+        <line num="106" type="stmt" count="0"/>
+        <line num="107" type="stmt" count="0"/>
+        <line num="109" type="stmt" count="0"/>
+        <line num="110" type="stmt" count="0"/>
+        <line num="117" type="method" name="removeIncidencia" crap="2" count="0"/>
+        <line num="118" type="stmt" count="0"/>
+        <line num="119" type="stmt" count="0"/>
+        <line num="120" type="stmt" count="0"/>
+        <line num="127" type="method" name="getIncidencias" crap="2" count="0"/>
+        <line num="128" type="stmt" count="0"/>
+        <line num="129" type="stmt" count="0"/>
+        <line num="130" type="stmt" count="0"/>
+        <line num="138" type="method" name="addTarea" crap="2" count="0"/>
+        <line num="139" type="stmt" count="0"/>
+        <line num="140" type="stmt" count="0"/>
+        <line num="142" type="stmt" count="0"/>
+        <line num="143" type="stmt" count="0"/>
+        <line num="150" type="method" name="removeTarea" crap="2" count="0"/>
+        <line num="151" type="stmt" count="0"/>
+        <line num="152" type="stmt" count="0"/>
+        <line num="153" type="stmt" count="0"/>
+        <line num="160" type="method" name="getTareas" crap="2" count="0"/>
+        <line num="161" type="stmt" count="0"/>
+        <line num="162" type="stmt" count="0"/>
+        <line num="163" type="stmt" count="0"/>
+        <metrics loc="163" ncloc="77" classes="1" methods="11" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="47" coveredstatements="0" elements="58" coveredelements="0"/>
+      </file>
+      <file name="/home/piero/sources/helpdeskOS/src/Recchia/HelpdeskBundle/Entity/Incidencia.php">
+        <class name="Incidencia" namespace="Recchia\HelpdeskBundle\Entity">
+          <metrics methods="21" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="31" coveredstatements="0" elements="52" coveredelements="0"/>
+        </class>
+        <line num="134" type="method" name="getId" crap="2" count="0"/>
+        <line num="136" type="stmt" count="0"/>
+        <line num="145" type="method" name="setCedula" crap="2" count="0"/>
+        <line num="147" type="stmt" count="0"/>
+        <line num="149" type="stmt" count="0"/>
+        <line num="157" type="method" name="getCedula" crap="2" count="0"/>
+        <line num="159" type="stmt" count="0"/>
+        <line num="168" type="method" name="setNombres" crap="2" count="0"/>
+        <line num="170" type="stmt" count="0"/>
+        <line num="172" type="stmt" count="0"/>
+        <line num="180" type="method" name="getNombres" crap="2" count="0"/>
+        <line num="182" type="stmt" count="0"/>
+        <line num="191" type="method" name="setApellidos" crap="2" count="0"/>
+        <line num="193" type="stmt" count="0"/>
+        <line num="195" type="stmt" count="0"/>
+        <line num="203" type="method" name="getApellidos" crap="2" count="0"/>
+        <line num="205" type="stmt" count="0"/>
+        <line num="214" type="method" name="setIncidencia" crap="2" count="0"/>
+        <line num="216" type="stmt" count="0"/>
+        <line num="218" type="stmt" count="0"/>
+        <line num="226" type="method" name="getIncidencia" crap="2" count="0"/>
+        <line num="228" type="stmt" count="0"/>
+        <line num="237" type="method" name="setMotivo" crap="2" count="0"/>
+        <line num="239" type="stmt" count="0"/>
+        <line num="241" type="stmt" count="0"/>
+        <line num="249" type="method" name="getMotivo" crap="2" count="0"/>
+        <line num="251" type="stmt" count="0"/>
+        <line num="260" type="method" name="setSolucion" crap="2" count="0"/>
+        <line num="262" type="stmt" count="0"/>
+        <line num="264" type="stmt" count="0"/>
+        <line num="272" type="method" name="getSolucion" crap="2" count="0"/>
+        <line num="274" type="stmt" count="0"/>
+        <line num="283" type="method" name="setUnidad" crap="2" count="0"/>
+        <line num="285" type="stmt" count="0"/>
+        <line num="287" type="stmt" count="0"/>
+        <line num="295" type="method" name="getUnidad" crap="2" count="0"/>
+        <line num="297" type="stmt" count="0"/>
+        <line num="306" type="method" name="setTecnico" crap="2" count="0"/>
+        <line num="308" type="stmt" count="0"/>
+        <line num="310" type="stmt" count="0"/>
+        <line num="318" type="method" name="getTecnico" crap="2" count="0"/>
+        <line num="320" type="stmt" count="0"/>
+        <line num="329" type="method" name="setCategoria" crap="2" count="0"/>
+        <line num="331" type="stmt" count="0"/>
+        <line num="333" type="stmt" count="0"/>
+        <line num="341" type="method" name="getCategoria" crap="2" count="0"/>
+        <line num="343" type="stmt" count="0"/>
+        <line num="352" type="method" name="setTarea" crap="2" count="0"/>
+        <line num="354" type="stmt" count="0"/>
+        <line num="356" type="stmt" count="0"/>
+        <line num="364" type="method" name="getTarea" crap="2" count="0"/>
+        <line num="366" type="stmt" count="0"/>
+        <metrics loc="367" ncloc="159" classes="1" methods="21" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="31" coveredstatements="0" elements="52" coveredelements="0"/>
+      </file>
+      <file name="/home/piero/sources/helpdeskOS/src/Recchia/HelpdeskBundle/Entity/Tarea.php">
+        <class name="Tarea" namespace="Recchia\HelpdeskBundle\Entity">
+          <metrics methods="10" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="42" coveredstatements="0" elements="52" coveredelements="0"/>
+        </class>
+        <line num="50" type="method" name="__construct" crap="2" count="0"/>
+        <line num="51" type="stmt" count="0"/>
+        <line num="52" type="stmt" count="0"/>
+        <line num="53" type="stmt" count="0"/>
+        <line num="61" type="method" name="getId" crap="2" count="0"/>
+        <line num="62" type="stmt" count="0"/>
+        <line num="63" type="stmt" count="0"/>
+        <line num="64" type="stmt" count="0"/>
+        <line num="72" type="method" name="setDescripcion" crap="2" count="0"/>
+        <line num="73" type="stmt" count="0"/>
+        <line num="74" type="stmt" count="0"/>
+        <line num="76" type="stmt" count="0"/>
+        <line num="77" type="stmt" count="0"/>
+        <line num="84" type="method" name="getDescripcion" crap="2" count="0"/>
+        <line num="85" type="stmt" count="0"/>
+        <line num="86" type="stmt" count="0"/>
+        <line num="87" type="stmt" count="0"/>
+        <line num="95" type="method" name="setCategoria" crap="2" count="0"/>
+        <line num="96" type="stmt" count="0"/>
+        <line num="97" type="stmt" count="0"/>
+        <line num="99" type="stmt" count="0"/>
+        <line num="100" type="stmt" count="0"/>
+        <line num="107" type="method" name="getCategoria" crap="2" count="0"/>
+        <line num="108" type="stmt" count="0"/>
+        <line num="109" type="stmt" count="0"/>
+        <line num="110" type="stmt" count="0"/>
+        <line num="117" type="method" name="__toString" crap="2" count="0"/>
+        <line num="118" type="stmt" count="0"/>
+        <line num="119" type="stmt" count="0"/>
+        <line num="127" type="method" name="addIncidencia" crap="2" count="0"/>
+        <line num="128" type="stmt" count="0"/>
+        <line num="129" type="stmt" count="0"/>
+        <line num="131" type="stmt" count="0"/>
+        <line num="132" type="stmt" count="0"/>
+        <line num="139" type="method" name="removeIncidencia" crap="2" count="0"/>
+        <line num="140" type="stmt" count="0"/>
+        <line num="141" type="stmt" count="0"/>
+        <line num="142" type="stmt" count="0"/>
+        <line num="149" type="method" name="getIncidencias" crap="2" count="0"/>
+        <line num="150" type="stmt" count="0"/>
+        <line num="151" type="stmt" count="0"/>
+        <line num="152" type="stmt" count="0"/>
+        <metrics loc="152" ncloc="72" classes="1" methods="10" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="42" coveredstatements="0" elements="52" coveredelements="0"/>
+      </file>
+      <file name="/home/piero/sources/helpdeskOS/src/Recchia/HelpdeskBundle/Entity/TareaRepository.php">
+        <class name="TareaRepository" namespace="Recchia\HelpdeskBundle\Entity">
+          <metrics methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="7" coveredstatements="0" elements="8" coveredelements="0"/>
+        </class>
+        <line num="15" type="method" name="getTareasByCategoria" crap="2" count="0"/>
+        <line num="16" type="stmt" count="0"/>
+        <line num="17" type="stmt" count="0"/>
+        <line num="18" type="stmt" count="0"/>
+        <line num="19" type="stmt" count="0"/>
+        <line num="21" type="stmt" count="0"/>
+        <line num="22" type="stmt" count="0"/>
+        <metrics loc="23" ncloc="17" classes="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="7" coveredstatements="0" elements="8" coveredelements="0"/>
+      </file>
+      <file name="/home/piero/sources/helpdeskOS/src/Recchia/HelpdeskBundle/Entity/UnidadAdministrativa.php">
+        <class name="UnidadAdministrativa" namespace="Recchia\HelpdeskBundle\Entity">
+          <metrics methods="22" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="34" coveredstatements="0" elements="56" coveredelements="0"/>
+        </class>
+        <line num="90" type="method" name="__construct" crap="2" count="0"/>
+        <line num="92" type="stmt" count="0"/>
+        <line num="93" type="stmt" count="0"/>
+        <line num="100" type="method" name="getId" crap="2" count="0"/>
+        <line num="102" type="stmt" count="0"/>
+        <line num="111" type="method" name="setNombre" crap="2" count="0"/>
+        <line num="113" type="stmt" count="0"/>
+        <line num="115" type="stmt" count="0"/>
+        <line num="123" type="method" name="getNombre" crap="2" count="0"/>
+        <line num="125" type="stmt" count="0"/>
+        <line num="134" type="method" name="setCodigo" crap="2" count="0"/>
+        <line num="136" type="stmt" count="0"/>
+        <line num="138" type="stmt" count="0"/>
+        <line num="146" type="method" name="getCodigo" crap="2" count="0"/>
+        <line num="148" type="stmt" count="0"/>
+        <line num="157" type="method" name="setUbicacion" crap="2" count="0"/>
+        <line num="159" type="stmt" count="0"/>
+        <line num="161" type="stmt" count="0"/>
+        <line num="169" type="method" name="getUbicacion" crap="2" count="0"/>
+        <line num="171" type="stmt" count="0"/>
+        <line num="180" type="method" name="setIsHelpdesk" crap="2" count="0"/>
+        <line num="182" type="stmt" count="0"/>
+        <line num="184" type="stmt" count="0"/>
+        <line num="192" type="method" name="getIsHelpdesk" crap="2" count="0"/>
+        <line num="194" type="stmt" count="0"/>
+        <line num="203" type="method" name="addChildren" crap="2" count="0"/>
+        <line num="205" type="stmt" count="0"/>
+        <line num="207" type="stmt" count="0"/>
+        <line num="215" type="method" name="removeChildren" crap="2" count="0"/>
+        <line num="217" type="stmt" count="0"/>
+        <line num="218" type="stmt" count="0"/>
+        <line num="225" type="method" name="getChildren" crap="2" count="0"/>
+        <line num="227" type="stmt" count="0"/>
+        <line num="236" type="method" name="setParent" crap="2" count="0"/>
+        <line num="238" type="stmt" count="0"/>
+        <line num="240" type="stmt" count="0"/>
+        <line num="248" type="method" name="getParent" crap="2" count="0"/>
+        <line num="250" type="stmt" count="0"/>
+        <line num="259" type="method" name="addUser" crap="2" count="0"/>
+        <line num="261" type="stmt" count="0"/>
+        <line num="263" type="stmt" count="0"/>
+        <line num="271" type="method" name="removeUser" crap="2" count="0"/>
+        <line num="273" type="stmt" count="0"/>
+        <line num="274" type="stmt" count="0"/>
+        <line num="281" type="method" name="getUsers" crap="2" count="0"/>
+        <line num="283" type="stmt" count="0"/>
+        <line num="291" type="method" name="__toString" crap="2" count="0"/>
+        <line num="292" type="stmt" count="0"/>
+        <line num="301" type="method" name="addIncidencia" crap="2" count="0"/>
+        <line num="303" type="stmt" count="0"/>
+        <line num="305" type="stmt" count="0"/>
+        <line num="313" type="method" name="removeIncidencia" crap="2" count="0"/>
+        <line num="315" type="stmt" count="0"/>
+        <line num="316" type="stmt" count="0"/>
+        <line num="323" type="method" name="getIncidencias" crap="2" count="0"/>
+        <line num="325" type="stmt" count="0"/>
+        <metrics loc="326" ncloc="152" classes="1" methods="22" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="34" coveredstatements="0" elements="56" coveredelements="0"/>
+      </file>
+    </package>
+    <package name="Recchia\HelpdeskBundle\Form\DataTransformer">
+      <file name="/home/piero/sources/helpdeskOS/src/Recchia/HelpdeskBundle/Form/DataTransformer/TecnicoToNumberTransformer.php">
+        <class name="TecnicoToNumberTransformer" namespace="Recchia\HelpdeskBundle\Form\DataTransformer">
+          <metrics methods="3" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="28" coveredstatements="0" elements="31" coveredelements="0"/>
+        </class>
+        <line num="6" type="stmt" count="0"/>
+        <line num="30" type="method" name="__construct" crap="2" count="0"/>
+        <line num="31" type="stmt" count="0"/>
+        <line num="32" type="stmt" count="0"/>
+        <line num="33" type="stmt" count="0"/>
+        <line num="41" type="method" name="transform" crap="6" count="0"/>
+        <line num="42" type="stmt" count="0"/>
+        <line num="43" type="stmt" count="0"/>
+        <line num="44" type="stmt" count="0"/>
+        <line num="45" type="stmt" count="0"/>
+        <line num="47" type="stmt" count="0"/>
+        <line num="48" type="stmt" count="0"/>
+        <line num="57" type="method" name="reverseTransform" crap="12" count="0"/>
+        <line num="58" type="stmt" count="0"/>
+        <line num="59" type="stmt" count="0"/>
+        <line num="60" type="stmt" count="0"/>
+        <line num="61" type="stmt" count="0"/>
+        <line num="63" type="stmt" count="0"/>
+        <line num="64" type="stmt" count="0"/>
+        <line num="65" type="stmt" count="0"/>
+        <line num="66" type="stmt" count="0"/>
+        <line num="68" type="stmt" count="0"/>
+        <line num="69" type="stmt" count="0"/>
+        <line num="70" type="stmt" count="0"/>
+        <line num="71" type="stmt" count="0"/>
+        <line num="72" type="stmt" count="0"/>
+        <line num="73" type="stmt" count="0"/>
+        <line num="75" type="stmt" count="0"/>
+        <line num="76" type="stmt" count="0"/>
+        <metrics loc="79" ncloc="51" classes="1" methods="3" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="29" coveredstatements="0" elements="32" coveredelements="0"/>
+      </file>
+    </package>
+    <package name="Recchia\HelpdeskBundle\Form\EventListener">
+      <file name="/home/piero/sources/helpdeskOS/src/Recchia/HelpdeskBundle/Form/EventListener/AddTareaFieldSubscriber.php">
+        <class name="AddTareaFieldSubscriber" namespace="Recchia\HelpdeskBundle\Form\EventListener">
+          <metrics methods="6" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="62" coveredstatements="0" elements="68" coveredelements="0"/>
+        </class>
+        <line num="6" type="stmt" count="0"/>
+        <line num="27" type="method" name="__construct" crap="2" count="0"/>
+        <line num="28" type="stmt" count="0"/>
+        <line num="29" type="stmt" count="0"/>
+        <line num="31" type="method" name="getSubscribedEvents" crap="2" count="0"/>
+        <line num="32" type="stmt" count="0"/>
+        <line num="33" type="stmt" count="0"/>
+        <line num="34" type="stmt" count="0"/>
+        <line num="35" type="stmt" count="0"/>
+        <line num="36" type="stmt" count="0"/>
+        <line num="38" type="method" name="addTareaForm" crap="12" count="0"/>
+        <line num="39" type="stmt" count="0"/>
+        <line num="40" type="stmt" count="0"/>
+        <line num="41" type="stmt" count="0"/>
+        <line num="42" type="stmt" count="0"/>
+        <line num="44" type="stmt" count="0"/>
+        <line num="45" type="stmt" count="0"/>
+        <line num="46" type="stmt" count="0"/>
+        <line num="47" type="stmt" count="0"/>
+        <line num="48" type="stmt" count="0"/>
+        <line num="49" type="stmt" count="0"/>
+        <line num="50" type="stmt" count="0"/>
+        <line num="51" type="stmt" count="0"/>
+        <line num="52" type="stmt" count="0"/>
+        <line num="53" type="stmt" count="0"/>
+        <line num="54" type="stmt" count="0"/>
+        <line num="55" type="stmt" count="0"/>
+        <line num="57" type="stmt" count="0"/>
+        <line num="58" type="stmt" count="0"/>
+        <line num="59" type="stmt" count="0"/>
+        <line num="60" type="stmt" count="0"/>
+        <line num="62" type="method" name="preSetData" crap="12" count="0"/>
+        <line num="63" type="stmt" count="0"/>
+        <line num="64" type="stmt" count="0"/>
+        <line num="66" type="stmt" count="0"/>
+        <line num="67" type="stmt" count="0"/>
+        <line num="68" type="stmt" count="0"/>
+        <line num="70" type="stmt" count="0"/>
+        <line num="71" type="stmt" count="0"/>
+        <line num="72" type="stmt" count="0"/>
+        <line num="74" type="method" name="preBind" crap="12" count="0"/>
+        <line num="75" type="stmt" count="0"/>
+        <line num="76" type="stmt" count="0"/>
+        <line num="78" type="stmt" count="0"/>
+        <line num="79" type="stmt" count="0"/>
+        <line num="80" type="stmt" count="0"/>
+        <line num="82" type="stmt" count="0"/>
+        <line num="83" type="stmt" count="0"/>
+        <line num="84" type="stmt" count="0"/>
+        <metrics loc="87" ncloc="78" classes="1" methods="6" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="49" coveredstatements="0" elements="55" coveredelements="0"/>
+      </file>
+    </package>
+    <package name="Recchia\HelpdeskBundle\Form">
+      <file name="/home/piero/sources/helpdeskOS/src/Recchia/HelpdeskBundle/Form/IncidenciaType.php">
+        <class name="IncidenciaType" namespace="Recchia\HelpdeskBundle\Form">
+          <metrics methods="4" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="38" coveredstatements="0" elements="42" coveredelements="0"/>
+        </class>
+        <line num="15" type="method" name="__construct" crap="2" count="0"/>
+        <line num="16" type="stmt" count="0"/>
+        <line num="17" type="stmt" count="0"/>
+        <line num="18" type="stmt" count="0"/>
+        <line num="20" type="method" name="buildForm" crap="6" count="0"/>
+        <line num="21" type="stmt" count="0"/>
+        <line num="22" type="stmt" count="0"/>
+        <line num="23" type="stmt" count="0"/>
+        <line num="24" type="stmt" count="0"/>
+        <line num="25" type="stmt" count="0"/>
+        <line num="26" type="stmt" count="0"/>
+        <line num="27" type="stmt" count="0"/>
+        <line num="28" type="stmt" count="0"/>
+        <line num="29" type="stmt" count="0"/>
+        <line num="30" type="stmt" count="0"/>
+        <line num="31" type="stmt" count="0"/>
+        <line num="32" type="stmt" count="0"/>
+        <line num="33" type="stmt" count="0"/>
+        <line num="34" type="stmt" count="0"/>
+        <line num="35" type="stmt" count="0"/>
+        <line num="36" type="stmt" count="0"/>
+        <line num="37" type="stmt" count="0"/>
+        <line num="38" type="stmt" count="0"/>
+        <line num="39" type="stmt" count="0"/>
+        <line num="40" type="stmt" count="0"/>
+        <line num="41" type="stmt" count="0"/>
+        <line num="42" type="stmt" count="0"/>
+        <line num="43" type="stmt" count="0"/>
+        <line num="45" type="method" name="setDefaultOptions" crap="2" count="0"/>
+        <line num="46" type="stmt" count="0"/>
+        <line num="47" type="stmt" count="0"/>
+        <line num="48" type="stmt" count="0"/>
+        <line num="49" type="stmt" count="0"/>
+        <line num="50" type="stmt" count="0"/>
+        <line num="52" type="method" name="getName" crap="2" count="0"/>
+        <line num="53" type="stmt" count="0"/>
+        <line num="54" type="stmt" count="0"/>
+        <line num="55" type="stmt" count="0"/>
+        <metrics loc="56" ncloc="56" classes="1" methods="4" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="38" coveredstatements="0" elements="42" coveredelements="0"/>
+      </file>
+    </package>
+    <package name="Recchia\HelpdeskBundle\Form\Type">
+      <file name="/home/piero/sources/helpdeskOS/src/Recchia/HelpdeskBundle/Form/Type/TecnicoInputType.php">
+        <class name="TecnicoInputType" namespace="Recchia\HelpdeskBundle\Form\Type">
+          <metrics methods="5" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="23" coveredstatements="0" elements="28" coveredelements="0"/>
+        </class>
+        <line num="6" type="stmt" count="0"/>
+        <line num="31" type="method" name="__construct" crap="2" count="0"/>
+        <line num="32" type="stmt" count="0"/>
+        <line num="33" type="stmt" count="0"/>
+        <line num="34" type="stmt" count="0"/>
+        <line num="36" type="method" name="buildForm" crap="2" count="0"/>
+        <line num="37" type="stmt" count="0"/>
+        <line num="38" type="stmt" count="0"/>
+        <line num="39" type="stmt" count="0"/>
+        <line num="40" type="stmt" count="0"/>
+        <line num="42" type="method" name="setDefaultOptions" crap="2" count="0"/>
+        <line num="43" type="stmt" count="0"/>
+        <line num="44" type="stmt" count="0"/>
+        <line num="45" type="stmt" count="0"/>
+        <line num="46" type="stmt" count="0"/>
+        <line num="47" type="stmt" count="0"/>
+        <line num="49" type="method" name="getParent" crap="2" count="0"/>
+        <line num="50" type="stmt" count="0"/>
+        <line num="51" type="stmt" count="0"/>
+        <line num="52" type="stmt" count="0"/>
+        <line num="54" type="method" name="getName" crap="2" count="0"/>
+        <line num="55" type="stmt" count="0"/>
+        <line num="56" type="stmt" count="0"/>
+        <line num="57" type="stmt" count="0"/>
+        <metrics loc="60" ncloc="45" classes="1" methods="5" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="24" coveredstatements="0" elements="29" coveredelements="0"/>
+      </file>
+    </package>
+    <package name="Recchia\HelpdeskBundle">
+      <file name="/home/piero/sources/helpdeskOS/src/Recchia/HelpdeskBundle/HelpdeskBundle.php">
+        <class name="HelpdeskBundle" namespace="Recchia\HelpdeskBundle">
+          <metrics methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+        </class>
+        <line num="10" type="stmt" count="1"/>
+        <metrics loc="9" ncloc="9" classes="1" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+      </file>
+    </package>
+    <metrics files="12" loc="1607" ncloc="928" classes="12" methods="94" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="446" coveredstatements="1" elements="540" coveredelements="2"/>
+  </project>
+</coverage>
