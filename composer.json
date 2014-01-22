@@ -25,7 +25,8 @@
         "sonata-project/doctrine-orm-admin-bundle": "2.2.*",
         "sonata-project/user-bundle": "dev-master",
         "knplabs/knp-paginator-bundle": "dev-master",
-        "friendsofsymfony/elastica-bundle": "3.0.*@dev"
+        "friendsofsymfony/elastica-bundle": "3.0.*@dev",
+        "sonata-project/core-bundle": "~2.2@dev"
     },
     "scripts": {
         "post-install-cmd": [

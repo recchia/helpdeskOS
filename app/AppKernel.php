@@ -26,6 +26,7 @@ class AppKernel extends Kernel
             new Knp\Bundle\PaginatorBundle\KnpPaginatorBundle(),
             new Sonata\UserBundle\SonataUserBundle('FOSUserBundle'),
             new Sonata\EasyExtendsBundle\SonataEasyExtendsBundle(),
+            new Sonata\CoreBundle\SonataCoreBundle(),
             new Application\Sonata\UserBundle\ApplicationSonataUserBundle(),
             new Recchia\HelpdeskBundle\HelpdeskBundle(),
         );
