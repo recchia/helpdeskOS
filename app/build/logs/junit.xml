@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuites>
-  <testsuite name="HelpdeskOS Test Suite" tests="1" assertions="2" failures="0" errors="0" time="4.651147">
-    <testsuite name="Recchia\HelpdeskBundle\Tests\Controller\DefaultControllerTest" file="/home/piero/sources/helpdeskOS/src/Recchia/HelpdeskBundle/Tests/Controller/DefaultControllerTest.php" namespace="Recchia\HelpdeskBundle\Tests\Controller" fullPackage="Recchia.HelpdeskBundle.Tests.Controller" tests="1" assertions="2" failures="0" errors="0" time="4.651147">
-      <testcase name="testIndex" class="Recchia\HelpdeskBundle\Tests\Controller\DefaultControllerTest" file="/home/piero/sources/helpdeskOS/src/Recchia/HelpdeskBundle/Tests/Controller/DefaultControllerTest.php" line="18" assertions="2" time="4.651147"/>
-    </testsuite>
-  </testsuite>
-</testsuites>
