@@ -46,12 +46,12 @@ ssh_options[:keys] = [File.join(ENV["HOME"], ".ssh", "KEY FILE NAME")]
 #before "symfony:cache:warmup", "symfony:doctrine:migrations:migrate"
  
 # Custom(ised) tasks
-namespace :deploy do
+#namespace :deploy do
 # Apache needs to be restarted to make sure that the APC cache is cleared.
 # This overwrites the :restart task in the parent config which is empty.
-desc "Restart Apache"
-task :restart, :except => { :no_release => true }, :roles => :app do
-run "sudo service nginx restart"
-puts "--> Nginx successfully restarted".green
-end
-end
+#desc "Restart Apache"
+#task :restart, :except => { :no_release => true }, :roles => :app do
+#run "sudo service nginx restart"
+#puts "--> Nginx successfully restarted".green
+#end
+#end
