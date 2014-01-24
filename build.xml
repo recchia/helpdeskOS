@@ -150,5 +150,11 @@
       <arg path="app/config/parameters.yml" />
     </exec>
   </target>
+  
+  <target name="deploy" description="Deploy application">
+    <exec executable="cap" failonerror="true">
+      <arg value="deploy" />
+    </exec>
+  </target>
 
 </project>
