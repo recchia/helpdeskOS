@@ -37,6 +37,7 @@ set :user, "bitgandtter"
 set :use_sudo, false
 ssh_options[:forward_agent] = true
 ssh_options[:keys] = [File.join(ENV["HOME"], ".ssh", "KEY FILE NAME")]
+default_run_options[:pty] = true
  
  
 # Uncomment this if you need more verbose output from Capifony
