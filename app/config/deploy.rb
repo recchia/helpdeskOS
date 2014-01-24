@@ -40,7 +40,7 @@ ssh_options[:keys] = [File.join(ENV["HOME"], ".ssh", "KEY FILE NAME")]
  
  
 # Uncomment this if you need more verbose output from Capifony
-#logger.level = Logger::MAX_LEVEL
+logger.level = Logger::MAX_LEVEL
  
 # Run migrations before warming the cache
 #before "symfony:cache:warmup", "symfony:doctrine:migrations:migrate"
