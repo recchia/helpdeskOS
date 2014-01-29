@@ -152,7 +152,7 @@
   </target>
   
   <target name="deploy" description="Deploy application">
-    <exec executable="cap" failonerror="true">
+    <exec executable="/usr/local/bin/cap" failonerror="true">
       <arg value="deploy" />
     </exec>
   </target>
