@@ -1,7 +1,7 @@
 # Deployment server info
 set :application, "HelpdeskOS"
-set :domain, "192.168.0.149"
-set :deploy_to, "/var/www/wuelto"
+set :domain, "192.168.0.138"
+set :deploy_to, "/home/piero/sources/produccion"
 set :app_path, "app"
 set :web_path, "web"
 set :maintenance_basename, "maintenance"
@@ -33,7 +33,7 @@ set :interactive_mode, false
 #set :branch, `git tag`.split("\n").last
  
 # User details for the production server
-set :user, "bitgandtter"
+set :user, "piero"
 set :use_sudo, false
 ssh_options[:forward_agent] = true
 ssh_options[:keys] = [File.join(ENV["HOME"], ".ssh", "KEY FILE NAME")]
