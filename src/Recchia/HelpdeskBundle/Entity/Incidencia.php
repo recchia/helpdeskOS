@@ -13,6 +13,7 @@
 namespace Recchia\HelpdeskBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * Recchia\HelpdeskBundle\Entity\Incidencia
@@ -67,6 +68,7 @@ class Incidencia {
      * @var integer
      * 
      * @ORM\Column(type="integer", nullable=false)
+     * @Assert\NotBlank(message = "Debe ingresar el número de cédula")
      */
     private $cedula;
     
@@ -75,6 +77,7 @@ class Incidencia {
      * @var string
      * 
      * @ORM\Column(type="string", length=32, nullable=false)
+     * @Assert\NotBlank(message = "Debe ingresar el nombre")
      */
     private $nombres;
     
@@ -83,6 +86,7 @@ class Incidencia {
      * @var string
      * 
      * @ORM\Column(type="string", length=32, nullable=false)
+     * @Assert\NotBlank(message = "Debe ingresar el apellido")
      */
     private $apellidos;
     
